@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarlanacer | بازرگانی بین‌المللی غلات و نهاده‌های دامی</title>
-<meta name="description" content="شرکت بازرگانی Tarlanacer - پیشرو در صادرات و واردات نهاده‌های دامی و غلات استراتژیک. تأسیس ۲۰۲۵، مستقر در مسکو.">
+<title>Tarlanacer | Global Trading of Grain & Animal Feed</title>
+<meta name="description" content="Tarlanacer trading company - Leader in export and import of strategic animal feed and grain. Established 2025, Moscow.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,8 @@ window.scrollTo(0, 0);
 :root{--primary:#2d6a4f;--primary-dark:#1b4332;--primary-light:#40916c;--secondary:#d4a373;--secondary-dark:#bc6c25;--accent:#52b788;--bg-dark:#081c15;--bg-light:#f8f9fa;--bg-cream:#fefae0;--text-dark:#1a1a1a;--text-muted:#6c757d;--text-light:#fff;--border:#e9ecef;--shadow:0 10px 40px rgba(0,0,0,.08);--shadow-lg:0 20px 60px rgba(0,0,0,.12);--radius:16px;--radius-sm:10px;--transition:all .4s cubic-bezier(.4,0,.2,1)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Vazirmatn',system-ui,-apple-system,sans-serif;background:var(--bg-light);color:var(--text-dark);line-height:1.7;overflow-x:hidden}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg-light);color:var(--text-dark);line-height:1.7;overflow-x:hidden;transition:font-family .3s ease}
+[dir="rtl"] body{font-family:'Vazirmatn',system-ui,-apple-system,sans-serif}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 a{text-decoration:none;color:inherit;transition:var(--transition)}
 ul{list-style:none}
@@ -29,16 +30,25 @@ img{max-width:100%;height:auto;display:block}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.4rem;color:var(--primary-dark)}
 .logo-icon{font-size:1.8rem;animation:bounce 2s ease-in-out infinite}
 .logo-text{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-right{display:flex;align-items:center;gap:16px}
 .nav-links{display:flex;align-items:center;gap:8px}
 .nav-link{padding:8px 18px;border-radius:50px;font-weight:500;font-size:.95rem;color:var(--text-dark);position:relative;overflow:hidden}
 .nav-link::before{content:'';position:absolute;inset:0;background:var(--primary);border-radius:50px;transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.4,0,.2,1);z-index:-1}
 .nav-link:hover::before,.nav-link.active::before{transform:scaleX(1);transform-origin:left}
 .nav-link:hover,.nav-link.active{color:#fff}
+
+/* Language Switcher */
+.lang-switcher{display:flex;align-items:center;background:rgba(45,106,79,.08);border-radius:50px;padding:3px;gap:3px;border:1px solid rgba(45,106,79,.15)}
+.lang-btn{background:transparent;border:none;padding:5px 10px;border-radius:50px;font-weight:600;font-size:0.8rem;cursor:pointer;color:var(--text-dark);transition:var(--transition)}
+.lang-btn.active{background:var(--primary);color:#fff;box-shadow:0 4px 15px rgba(45,106,79,.3)}
+.lang-btn:hover:not(.active){color:var(--primary)}
+
 .hamburger{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer;padding:8px}
 .hamburger span{width:26px;height:3px;background:var(--primary-dark);border-radius:3px;transition:var(--transition)}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:80px;overflow:hidden;background:linear-gradient(135deg,#081c15 0%,#1b4332 40%,#2d6a4f 100%)}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(82,183,136,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(212,163,115,.1) 0%,transparent 50%);animation:bgPulse 8s ease-in-out infinite alternate}
 .hero-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -57,20 +67,24 @@ img{max-width:100%;height:auto;display:block}
 .icon-2{top:50%;right:5%;animation-delay:.5s}
 .icon-3{bottom:10%;left:50%;transform:translateX(-50%);animation-delay:1s}
 .icon-4{top:50%;left:5%;animation-delay:1.5s}
+
 section{padding:100px 0}
 .section-header{text-align:center;margin-bottom:60px}
 .section-tag{display:inline-block;background:rgba(45,106,79,.1);color:var(--primary);padding:6px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:16px}
 .section-title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--primary-dark);margin-bottom:16px}
 .title-underline{width:80px;height:4px;background:linear-gradient(90deg,var(--accent),var(--secondary));margin:0 auto;border-radius:2px;position:relative}
 .title-underline::after{content:'';position:absolute;width:12px;height:12px;background:var(--secondary);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:pulse 2s infinite}
+
 .about{background:#fff}
 .about-content-wrap{max-width:860px;margin:0 auto}
 .about-content p{color:var(--text-muted);margin-bottom:16px;font-size:1.05rem;text-align:justify}
+[dir="ltr"] .about-content p{text-align:left}
 .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;width:100%}
 .stat-item{text-align:center;padding:22px 16px;background:var(--bg-cream);border-radius:var(--radius-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:center;align-items:center}
 .stat-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .stat-number{display:block;font-size:1.8rem;font-weight:800;color:var(--primary);margin-bottom:4px;line-height:1.2}
 .stat-label{font-size:.85rem;color:var(--text-muted);line-height:1.3}
+
 .services{background:linear-gradient(180deg,var(--bg-light) 0%,#e8f5e9 100%)}
 .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .service-card{background:#fff;padding:36px 28px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden;transition:var(--transition);border:1px solid transparent}
@@ -83,12 +97,14 @@ section{padding:100px 0}
 .service-card p{font-size:.95rem;color:var(--text-muted);line-height:1.6}
 .service-hover-line{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--secondary));transform:scaleX(0);transition:transform .4s ease}
 .service-card:hover .service-hover-line{transform:scaleX(1)}
+
 .advantages-section{background:#fff;padding:80px 0}
 .about-card-box{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;padding:44px 36px;border-radius:var(--radius);box-shadow:var(--shadow-lg);position:relative;overflow:hidden;max-width:860px;margin:0 auto}
 .about-card-box::after{content:'🌾';position:absolute;bottom:-20px;left:-10px;font-size:8rem;opacity:.08}
 .about-card-box h4{font-size:1.45rem;margin-bottom:20px;color:var(--secondary)}
 .about-card-list{display:flex;flex-direction:column;gap:16px}
 .about-card-list li{display:flex;align-items:center;gap:12px;font-size:1.02rem;opacity:.95}
+
 .gallery{background:var(--bg-light)}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
 .gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;min-height:360px;width:100%;height:100%;box-shadow:var(--shadow);cursor:pointer}
@@ -98,6 +114,7 @@ section{padding:100px 0}
 .gallery-item:hover .gallery-overlay{opacity:1}
 .gallery-overlay span{color:#fff;font-weight:600;padding:10px 24px;border:2px solid #fff;border-radius:50px;transform:translateY(20px);transition:var(--transition)}
 .gallery-item:hover .gallery-overlay span{transform:translateY(0)}
+
 .cta{background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;position:relative;overflow:hidden}
 .cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(255,255,255,.05);border-radius:50%;top:-100px;right:-100px;animation:float 6s ease-in-out infinite}
 .cta-content{text-align:center;color:#fff;position:relative;z-index:1}
@@ -107,6 +124,7 @@ section{padding:100px 0}
 .btn-primary{background:linear-gradient(135deg,var(--accent),var(--primary-light));color:#fff;box-shadow:0 8px 30px rgba(82,183,136,.4)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(82,183,136,.5)}
 .btn-lg{padding:18px 40px;font-size:1.1rem}
+
 .contact-hero{padding:140px 0 60px;background:linear-gradient(135deg,#081c15 0%,#1b4332 100%);text-align:center;color:#fff}
 .contact-hero .section-tag{background:rgba(82,183,136,.2);color:var(--accent)}
 .contact-hero .section-title{color:#fff}
@@ -124,12 +142,14 @@ section{padding:100px 0}
 .highlight-card .info-icon{background:rgba(255,255,255,.15)}
 .highlight-card .info-content h3,.highlight-card .info-content p{color:#fff}
 .small-text{font-size:.85rem!important;opacity:.8;margin-top:4px}
+
 .map-section{padding:0 0 80px;background:var(--bg-light)}
 .map-placeholder{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:var(--radius);height:300px;display:flex;align-items:center;justify-content:center;border:3px dashed var(--primary-light)}
 .map-content{text-align:center}
 .map-icon{font-size:3rem;display:block;margin-bottom:12px}
 .map-content h3{color:var(--primary-dark);margin-bottom:8px}
 .map-hint{font-size:.85rem;color:var(--text-muted);margin-top:8px}
+
 .footer{background:var(--bg-dark);color:rgba(255,255,255,.8);padding:60px 0 0}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
 .footer-brand .logo{color:#fff;margin-bottom:16px}
@@ -138,7 +158,7 @@ section{padding:100px 0}
 .footer-year{color:var(--accent);font-weight:600}
 .footer-links h4,.footer-contact h4{color:#fff;font-size:1.1rem;margin-bottom:20px}
 .footer-links ul,.footer-contact ul{display:flex;flex-direction:column;gap:12px}
-.footer-links a:hover{color:var(--accent);padding-right:8px}
+.footer-links a:hover{color:var(--accent);padding-inline-start:8px}
 .footer-contact li{display:flex;align-items:center;gap:12px}
 .contact-icon{font-size:1.1rem}
 .footer-contact a:hover{color:var(--accent)}
@@ -146,8 +166,10 @@ section{padding:100px 0}
 .developer-watermark{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.82rem;color:rgba(255,255,255,.55)}
 .developer-watermark a{color:var(--accent);font-weight:600;letter-spacing:.3px}
 .developer-watermark a:hover{color:var(--secondary);text-decoration:underline}
+
 .page{display:none}
 .page.active{display:block}
+
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 @keyframes floatParticle{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) rotate(720deg);opacity:0}}
@@ -156,16 +178,19 @@ section{padding:100px 0}
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 .animate-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
 .animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+
 .services-grid .service-card:nth-child(1){transition-delay:.1s}
 .services-grid .service-card:nth-child(2){transition-delay:.2s}
 .services-grid .service-card:nth-child(3){transition-delay:.3s}
 .services-grid .service-card:nth-child(4){transition-delay:.4s}
+
 .gallery-grid .gallery-item:nth-child(1){transition-delay:.1s}
 .gallery-grid .gallery-item:nth-child(2){transition-delay:.2s}
 .gallery-grid .gallery-item:nth-child(3){transition-delay:.3s}
 .gallery-grid .gallery-item:nth-child(4){transition-delay:.4s}
+
 @media(max-width:992px){.hero-content{grid-template-columns:1fr;text-align:center;gap:40px}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-visual{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}.contact-info{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;top:70px;right:-100%;width:80%;max-width:300px;height:calc(100vh - 70px);background:#fff;flex-direction:column;padding:30px 20px;box-shadow:var(--shadow-lg);transition:right .4s ease;gap:8px}.nav-links.active{right:0}.nav-link{width:100%;text-align:center;padding:14px}.services-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:280px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-contact li{justify-content:center}section{padding:70px 0}.about-stats{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:768px){.hamburger{display:flex}.nav-right{gap:8px}.nav-links{position:fixed;top:70px;right:-100%;width:80%;max-width:300px;height:calc(100vh - 70px);background:#fff;flex-direction:column;padding:30px 20px;box-shadow:var(--shadow-lg);transition:right .4s ease;gap:8px}[dir="rtl"] .nav-links{right:auto;left:-100%;transition:left .4s ease}[dir="rtl"] .nav-links.active{left:0}.nav-links.active{right:0}.nav-link{width:100%;text-align:center;padding:14px}.services-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:280px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-contact li{justify-content:center}section{padding:70px 0}.about-stats{grid-template-columns:repeat(2,1fr);gap:12px}}
 @media(max-width:480px){.hero-title{font-size:1.8rem}.about-stats{grid-template-columns:repeat(2,1fr);gap:10px}.about-card-box{padding:28px 20px}}
 </style>
 </head>
@@ -177,13 +202,20 @@ section{padding:100px 0}
 <span class="logo-icon">🌾</span>
 <span class="logo-text">Tarlanacer</span>
 </a>
+<div class="nav-right">
+<div class="lang-switcher">
+<button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+<button class="lang-btn" onclick="setLanguage('ru')">RU</button>
+<button class="lang-btn" onclick="setLanguage('fa')">FA</button>
+</div>
 <ul class="nav-links" id="navLinks">
-<li><a href="#" class="nav-link active" data-page="home" onclick="showPage('home');return false;">خانه</a></li>
-<li><a href="#" class="nav-link" data-page="home" onclick="showPage('home');setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),50);return false;">درباره ما</a></li>
-<li><a href="#" class="nav-link" data-page="home" onclick="showPage('home');setTimeout(()=>document.getElementById('gallery').scrollIntoView({behavior:'smooth'}),50);return false;">گالری تصاویر</a></li>
-<li><a href="#" class="nav-link" data-page="contact" onclick="showPage('contact');return false;">ارتباط با ما</a></li>
+<li><a href="#" class="nav-link active" data-page="home" onclick="showPage('home');return false;" data-i18n="navHome">Home</a></li>
+<li><a href="#" class="nav-link" data-page="home" onclick="showPage('home');setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),50);return false;" data-i18n="navAbout">About Us</a></li>
+<li><a href="#" class="nav-link" data-page="home" onclick="showPage('home');setTimeout(()=>document.getElementById('gallery').scrollIntoView({behavior:'smooth'}),50);return false;" data-i18n="navGallery">Gallery</a></li>
+<li><a href="#" class="nav-link" data-page="contact" onclick="showPage('contact');return false;" data-i18n="navContact">Contact Us</a></li>
 </ul>
-<button class="hamburger" id="hamburger" aria-label="منو"><span></span><span></span><span></span></button>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
 </div>
 </nav>
 
@@ -196,10 +228,10 @@ section{padding:100px 0}
 <div class="hero-text animate-on-scroll">
 <span class="hero-badge" dir="ltr">Tarlanacer Company</span>
 <h1 class="hero-title">
-<span class="title-line">تأمین و تجارت جهانی</span>
-<span class="title-line highlight">غلات و نهاده‌های دامی</span>
+<span class="title-line" data-i18n="heroTitle1">Global Supply & Trade of</span>
+<span class="title-line highlight" data-i18n="heroTitle2">Grain & Animal Feed</span>
 </h1>
-<p class="hero-subtitle">شرکت بازرگانی <strong>Tarlanacer</strong> با استقرار در مسکو و تکیه بر شبکه گسترده تأمین، مرجع تخصصی صادرات و واردات غلات استراتژیک و نهاده‌های خوراک دام با بالاترین استانداردهای بین‌المللی است.</p>
+<p class="hero-subtitle" data-i18n="heroSubtitle">Tarlanacer trading company, established in 2025 and based in Moscow, is a specialized reference for the export and import of strategic grain and animal feed with the highest international standards.</p>
 </div>
 <div class="hero-visual animate-on-scroll">
 <div class="hero-card"><div class="hero-card-inner">
@@ -215,18 +247,18 @@ section{padding:100px 0}
 <section class="about" id="about">
 <div class="container">
 <div class="section-header">
-<h2 class="section-title">معرفی شرکت</h2>
+<h2 class="section-title" data-i18n="aboutTitle">Company Overview</h2>
 <div class="title-underline"></div>
 </div>
 <div class="about-content-wrap animate-on-scroll">
 <div class="about-content">
-<p>شرکت <strong>Tarlanacer</strong> در سال ۲۰۲۵ با هدف توسعه زنجیره تأمین پایدار در بخش کشاورزی و دامپروری، فعالیت خود را در قلب تجاری اوراسیا (مسکو) آغاز نمود.</p>
-<p>تمرکز اصلی ما بر صادرات و واردات مستقیم انواع غلات و نهاده‌های دامی است. ما با حذف واسطه‌های غیرضروری، نظارت مستمر بر کیفیت محموله‌ها و پایبندی کامل به تعهدات قراردادی، بستری امن و شفاف برای شرکای تجاری و خریداران عمده فراهم کرده‌ایم.</p>
+<p data-i18n="aboutText1">Tarlanacer company was established in 2025 in the commercial heart of Eurasia (Moscow) with the aim of developing a sustainable supply chain in agriculture and livestock.</p>
+<p data-i18n="aboutText2">Our core focus is the direct export and import of various grains and animal feed. By eliminating unnecessary intermediaries, continuously monitoring shipment quality, and fully adhering to contractual commitments, we provide a secure and transparent platform for commercial partners and bulk buyers.</p>
 <div class="about-stats">
-<div class="stat-item"><span class="stat-number" data-target="2025">0</span><span class="stat-label">سال تأسیس</span></div>
-<div class="stat-item"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label">ضمانت کالا</span></div>
-<div class="stat-item"><span class="stat-number" data-target="24" data-suffix="h">0</span><span class="stat-label">پشتیبانی</span></div>
-<div class="stat-item"><span class="stat-number" dir="ltr" data-target="100" data-prefix="+">0</span><span class="stat-label">مشتریان</span></div>
+<div class="stat-item"><span class="stat-number" data-target="2025">0</span><span class="stat-label" data-i18n="stat1Label">Founded Year</span></div>
+<div class="stat-item"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label" data-i18n="stat2Label">Product Guarantee</span></div>
+<div class="stat-item"><span class="stat-number" data-target="24" data-suffix="h">0</span><span class="stat-label" data-i18n="stat3Label">Support</span></div>
+<div class="stat-item"><span class="stat-number" dir="ltr" data-target="100" data-prefix="+">0</span><span class="stat-label" data-i18n="stat4Label">Customers</span></div>
 </div>
 </div>
 </div>
@@ -236,33 +268,33 @@ section{padding:100px 0}
 <section class="services" id="services">
 <div class="container">
 <div class="section-header animate-on-scroll">
-<span class="section-tag">حوزه فعالیت</span>
-<h2 class="section-title">خدمات بازرگانی ما</h2>
+<span class="section-tag" data-i18n="servicesTag">Business Domain</span>
+<h2 class="section-title" data-i18n="servicesTitle">Our Trading Services</h2>
 <div class="title-underline"></div>
 </div>
 <div class="services-grid">
 <div class="service-card animate-on-scroll">
 <div class="service-icon-wrapper"><div class="service-icon">📦</div></div>
-<h3>صادرات نهاده‌های دامی</h3>
-<p>تأمین و صادرات تخصصی کنجاله‌ها، مکمل‌های خوراک دام و طیور و مواد اولیه با ارزش غذایی تضمین‌شده.</p>
+<h3 data-i18n="serv1Title">Animal Feed Export</h3>
+<p data-i18n="serv1Desc">Specialized supply and export of meals, poultry/livestock feed supplements, and raw materials with guaranteed nutritional value.</p>
 <div class="service-hover-line"></div>
 </div>
 <div class="service-card animate-on-scroll">
 <div class="service-icon-wrapper"><div class="service-icon">🌾</div></div>
-<h3>صادرات و واردات غلات</h3>
-<p>تجارت عمده گندم، جو، ذرت دامی و دانه‌های روغنی مطابق با استانداردهای کیفی بازارهای هدف.</p>
+<h3 data-i18n="serv2Title">Grain Export & Import</h3>
+<p data-i18n="serv2Desc">Bulk trade of wheat, barley, feed corn, and oilseeds in accordance with target market quality standards.</p>
 <div class="service-hover-line"></div>
 </div>
 <div class="service-card animate-on-scroll">
 <div class="service-icon-wrapper"><div class="service-icon">🌍</div></div>
-<h3>زنجیره تأمین بین‌المللی</h3>
-<p>ایجاد پل ارتباطی مستقیم میان تولیدکنندگان بزرگ منطقه اوراسیا و واردکنندگان عمده در سراسر جهان.</p>
+<h3 data-i18n="serv3Title">International Supply Chain</h3>
+<p data-i18n="serv3Desc">Creating a direct communication bridge between major producers in the Eurasia region and bulk importers worldwide.</p>
 <div class="service-hover-line"></div>
 </div>
 <div class="service-card animate-on-scroll">
 <div class="service-icon-wrapper"><div class="service-icon">✅</div></div>
-<h3>بازرسی و تضمین کیفیت</h3>
-<p>ارزیابی دقیق سلامت بار، کنترل رطوبت و استانداردهای بهداشتی از مبدأ تولید تا مقصد نهایی.</p>
+<h3 data-i18n="serv4Title">Inspection & Quality Assurance</h3>
+<p data-i18n="serv4Desc">Precise evaluation of cargo health, moisture control, and hygiene standards from production origin to final destination.</p>
 <div class="service-hover-line"></div>
 </div>
 </div>
@@ -272,13 +304,13 @@ section{padding:100px 0}
 <section class="advantages-section" id="advantages">
 <div class="container">
 <div class="about-card-box animate-on-scroll">
-<h4>مزایای همکاری با ما</h4>
+<h4 data-i18n="advantagesTitle">Advantages of Partnering With Us</h4>
 <ul class="about-card-list">
-<li><span>✔</span> دسترسی مستقیم به منابع دست‌اول</li>
-<li><span>✔</span> انجام کنترل کیفی محصول</li>
-<li><span>✔</span> تست آزمایشگاهی سلامت محصول</li>
-<li><span>✔</span> لجستیک بین‌المللی و ترخیص سریع محموله‌ها</li>
-<li><span>✔</span> قیمت‌گذاری رقابتی</li>
+<li><span>✔</span> <span data-i18n="adv1">Direct access to first-hand sources</span></li>
+<li><span>✔</span> <span data-i18n="adv2">Product quality control</span></li>
+<li><span>✔</span> <span data-i18n="adv3">Product health laboratory testing</span></li>
+<li><span>✔</span> <span data-i18n="adv4">International logistics & fast clearance</span></li>
+<li><span>✔</span> <span data-i18n="adv5">Competitive pricing</span></li>
 </ul>
 </div>
 </div>
@@ -287,26 +319,26 @@ section{padding:100px 0}
 <section class="gallery" id="gallery">
 <div class="container">
 <div class="section-header animate-on-scroll">
-<span class="section-tag">گالری</span>
-<h2 class="section-title">گالری تصاویر و رویداد ها</h2>
+<span class="section-tag" data-i18n="galleryTag">Gallery</span>
+<h2 class="section-title" data-i18n="galleryTitle">Gallery & Events</h2>
 <div class="title-underline"></div>
 </div>
 <div class="gallery-grid">
 <div class="gallery-item animate-on-scroll">
-<img src="https://i.ibb.co/bfjby2m/IMG-4902.png" alt="تصویر فعالیت ۱" class="gallery-img">
-<div class="gallery-overlay"><span>تأمین مستقیم غلات</span></div>
+<img src="https://i.ibb.co/bfjby2m/IMG-4902.png" alt="Activity 1" class="gallery-img">
+<div class="gallery-overlay"><span data-i18n="gal1Overlay">Direct Grain Supply</span></div>
 </div>
 <div class="gallery-item animate-on-scroll">
-<img src="https://i.ibb.co/Ng4FPNHk/IMG-0896.jpg" alt="تصویر فعالیت ۲" class="gallery-img">
-<div class="gallery-overlay"><span>نهاده‌های دامی باکیفیت</span></div>
+<img src="https://i.ibb.co/Ng4FPNHk/IMG-0896.jpg" alt="Activity 2" class="gallery-img">
+<div class="gallery-overlay"><span data-i18n="gal2Overlay">Quality Animal Feed</span></div>
 </div>
 <div class="gallery-item animate-on-scroll">
-<img src="https://i.ibb.co/cn4gmkT/f6c94133-5794-4b7f-b643-9026bea5a70d.jpg" alt="تصویر فعالیت ۳" class="gallery-img">
-<div class="gallery-overlay"><span>حمل‌ونقل و لجستیک</span></div>
+<img src="https://i.ibb.co/cn4gmkT/f6c94133-5794-4b7f-b643-9026bea5a70d.jpg" alt="Activity 3" class="gallery-img">
+<div class="gallery-overlay"><span data-i18n="gal3Overlay">Logistics & Transportation</span></div>
 </div>
 <div class="gallery-item animate-on-scroll">
-<img src="https://i.ibb.co/Mx0PHjvY/IMG-4903.png" alt="تصویر فعالیت ۴" class="gallery-img">
-<div class="gallery-overlay"><span>استانداردهای صادراتی</span></div>
+<img src="https://i.ibb.co/Mx0PHjvY/IMG-4903.png" alt="Activity 4" class="gallery-img">
+<div class="gallery-overlay"><span data-i18n="gal4Overlay">Export Standards</span></div>
 </div>
 </div>
 </div>
@@ -315,9 +347,9 @@ section{padding:100px 0}
 <section class="cta">
 <div class="container">
 <div class="cta-content animate-on-scroll">
-<h2>آماده آغاز همکاری تجاری هستید؟</h2>
-<p>برای استعلام قیمت روز محموله‌ها، دریافت آنالیز محصولات و مذاکره جهت عقد قرارداد با بخش بازرگانی ما در ارتباط باشید.</p>
-<a href="#" class="btn btn-primary btn-lg" onclick="showPage('contact');return false;">ارتباط با بخش بازرگانی</a>
+<h2 data-i18n="ctaTitle">Ready to Start Commercial Cooperation?</h2>
+<p data-i18n="ctaDesc">Contact our trading department to inquire about daily shipment prices, product analysis, and contract negotiations.</p>
+<a href="#" class="btn btn-primary btn-lg" onclick="showPage('contact');return false;" data-i18n="ctaBtn">Contact Trading Dept</a>
 </div>
 </div>
 </section>
@@ -329,10 +361,10 @@ section{padding:100px 0}
 <section class="contact-hero">
 <div class="container">
 <div class="contact-hero-content animate-on-scroll">
-<span class="section-tag">ارتباط با ما</span>
-<h1 class="section-title">تماس با شرکت Tarlanacer</h1>
+<span class="section-tag" data-i18n="contactHeroTag">Contact Us</span>
+<h1 class="section-title" data-i18n="contactHeroTitle">Contact Tarlanacer Company</h1>
 <div class="title-underline"></div>
-<p>کارشناسان بازرگانی ما آماده پاسخگویی به درخواست‌های تأمین، صادرات و واردات شما هستند.</p>
+<p data-i18n="contactHeroDesc">Our trading experts are ready to answer your supply, export, and import requests.</p>
 </div>
 </div>
 </section>
@@ -344,30 +376,30 @@ section{padding:100px 0}
 <div class="info-card">
 <div class="info-icon">📍</div>
 <div class="info-content">
-<h3>آدرس دفتر مرکزی</h3>
+<h3 data-i18n="addrTitle">Headquarters</h3>
 <p>Flat 7 building 13, kosygina st</p>
 </div>
 </div>
 <div class="info-card">
 <div class="info-icon">📞</div>
 <div class="info-content">
-<h3>تلفن تماس</h3>
+<h3 data-i18n="phoneTitle">Phone</h3>
 <p dir="ltr">+61 3 8376 6284</p>
 </div>
 </div>
 <div class="info-card">
 <div class="info-icon">📧</div>
 <div class="info-content">
-<h3>پست الکترونیک</h3>
+<h3 data-i18n="emailTitle">Email</h3>
 <a href="mailto:info@tarlanacer.com">info@tarlanacer.com</a>
 </div>
 </div>
 <div class="info-card highlight-card">
 <div class="info-icon">🏢</div>
 <div class="info-content">
-<h3>حوزه تخصصی شرکت</h3>
-<p>صادرات و واردات نهاده‌های دامی و غلات</p>
-<p class="small-text">سال تأسیس: ۲۰۲۵</p>
+<h3 data-i18n="specTitle">Company Specialization</h3>
+<p data-i18n="specDesc">Export and import of animal feed and grain</p>
+<p class="small-text" data-i18n="specSub">Founded: 2025</p>
 </div>
 </div>
 </div>
@@ -380,9 +412,9 @@ section{padding:100px 0}
 <div class="map-placeholder animate-on-scroll">
 <div class="map-content">
 <span class="map-icon">🗺️</span>
-<h3>موقعیت دفتر مرکزی</h3>
+<h3 data-i18n="mapTitle">Headquarters Location</h3>
 <p>Flat 7 building 13, kosygina st</p>
-<p class="map-hint">مسکو، فدراسیون روسیه</p>
+<p class="map-hint" data-i18n="mapHint">Moscow, Russian Federation</p>
 </div>
 </div>
 </div>
@@ -398,20 +430,20 @@ section{padding:100px 0}
 <span class="logo-icon">🌾</span>
 <span class="logo-text">Tarlanacer</span>
 </a>
-<p>بازرگانی بین‌المللی، صادرات و واردات نهاده‌های دامی و غلات</p>
-<p class="footer-year">تأسیس ۲۰۲۵ | مسکو</p>
+<p data-i18n="footerDesc">International trading, export and import of animal feed and grain</p>
+<p class="footer-year" data-i18n="footerYear">Founded 2025 | Moscow</p>
 </div>
 <div class="footer-links">
-<h4>دسترسی سریع</h4>
+<h4 data-i18n="footerQuick">Quick Access</h4>
 <ul>
-<li><a href="#" onclick="showPage('home');return false;">خانه</a></li>
-<li><a href="#" onclick="showPage('home');setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),50);return false;">درباره ما</a></li>
-<li><a href="#" onclick="showPage('home');setTimeout(()=>document.getElementById('gallery').scrollIntoView({behavior:'smooth'}),50);return false;">گالری تصاویر</a></li>
-<li><a href="#" onclick="showPage('contact');return false;">ارتباط با ما</a></li>
+<li><a href="#" onclick="showPage('home');return false;" data-i18n="navHome">Home</a></li>
+<li><a href="#" onclick="showPage('home');setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),50);return false;" data-i18n="navAbout">About Us</a></li>
+<li><a href="#" onclick="showPage('home');setTimeout(()=>document.getElementById('gallery').scrollIntoView({behavior:'smooth'}),50);return false;" data-i18n="navGallery">Gallery</a></li>
+<li><a href="#" onclick="showPage('contact');return false;" data-i18n="navContact">Contact Us</a></li>
 </ul>
 </div>
 <div class="footer-contact">
-<h4>اطلاعات تماس</h4>
+<h4 data-i18n="footerContact">Contact Info</h4>
 <ul>
 <li><span class="contact-icon">📍</span><span>Flat 7 building 13, kosygina st</span></li>
 <li><span class="contact-icon">📞</span><span dir="ltr">+61 3 8376 6284</span></li>
@@ -420,111 +452,322 @@ section{padding:100px 0}
 </div>
 </div>
 <div class="footer-bottom">
-<p>&copy; ۲۰۲۵ Tarlanacer. تمامی حقوق محفوظ است.</p>
+<p data-i18n="footerRights">&copy; 2025 Tarlanacer. All rights reserved.</p>
 <div class="developer-watermark">
-<a href="https://mobin.cam" target="_blank" rel="noopener noreferrer">طراحی و توسعه توسط Mobin_Gorjizadeh</a>
+<a href="https://mobin.cam" target="_blank" rel="noopener noreferrer" data-i18n="devWatermark">Designed & Developed by Mobin_Gorjizadeh</a>
 <span>|</span>
-<a href="https://mobin.cam" target="_blank" rel="noopener noreferrer" dir="ltr">Powered by Mobin_Gorjizadeh</a>
+<a href="https://mobin.cam" target="_blank" rel="noopener noreferrer" dir="ltr" data-i18n="powerWatermark">Powered by Mobin_Gorjizadeh</a>
 </div>
 </div>
 </div>
 </footer>
 
 <script>
+const translations = {
+  en: {
+    navHome: "Home",
+    navAbout: "About Us",
+    navGallery: "Gallery",
+    navContact: "Contact Us",
+    heroBadge: "Tarlanacer Company",
+    heroTitle1: "Global Supply & Trade of",
+    heroTitle2: "Grain & Animal Feed",
+    heroSubtitle: "Tarlanacer trading company, established in 2025 and based in Moscow, is a specialized reference for the export and import of strategic grain and animal feed with the highest international standards.",
+    aboutTitle: "Company Overview",
+    aboutText1: "Tarlanacer company was established in 2025 in the commercial heart of Eurasia (Moscow) with the aim of developing a sustainable supply chain in agriculture and livestock.",
+    aboutText2: "Our core focus is the direct export and import of various grains and animal feed. By eliminating unnecessary intermediaries, continuously monitoring shipment quality, and fully adhering to contractual commitments, we provide a secure and transparent platform for commercial partners and bulk buyers.",
+    stat1Label: "Founded Year",
+    stat2Label: "Product Guarantee",
+    stat3Label: "Support",
+    stat4Label: "Customers",
+    servicesTag: "Business Domain",
+    servicesTitle: "Our Trading Services",
+    serv1Title: "Animal Feed Export",
+    serv1Desc: "Specialized supply and export of meals, poultry/livestock feed supplements, and raw materials with guaranteed nutritional value.",
+    serv2Title: "Grain Export & Import",
+    serv2Desc: "Bulk trade of wheat, barley, feed corn, and oilseeds in accordance with target market quality standards.",
+    serv3Title: "International Supply Chain",
+    serv3Desc: "Creating a direct communication bridge between major producers in the Eurasia region and bulk importers worldwide.",
+    serv4Title: "Inspection & Quality Assurance",
+    serv4Desc: "Precise evaluation of cargo health, moisture control, and hygiene standards from production origin to final destination.",
+    advantagesTitle: "Advantages of Partnering With Us",
+    adv1: "Direct access to first-hand sources",
+    adv2: "Product quality control",
+    adv3: "Product health laboratory testing",
+    adv4: "International logistics & fast clearance",
+    adv5: "Competitive pricing",
+    galleryTag: "Gallery",
+    galleryTitle: "Gallery & Events",
+    gal1Overlay: "Direct Grain Supply",
+    gal2Overlay: "Quality Animal Feed",
+    gal3Overlay: "Logistics & Transportation",
+    gal4Overlay: "Export Standards",
+    ctaTitle: "Ready to Start Commercial Cooperation?",
+    ctaDesc: "Contact our trading department to inquire about daily shipment prices, product analysis, and contract negotiations.",
+    ctaBtn: "Contact Trading Dept",
+    contactHeroTag: "Contact Us",
+    contactHeroTitle: "Contact Tarlanacer Company",
+    contactHeroDesc: "Our trading experts are ready to answer your supply, export, and import requests.",
+    addrTitle: "Headquarters",
+    phoneTitle: "Phone",
+    emailTitle: "Email",
+    specTitle: "Company Specialization",
+    specDesc: "Export and import of animal feed and grain",
+    specSub: "Founded: 2025",
+    mapTitle: "Headquarters Location",
+    mapHint: "Moscow, Russian Federation",
+    footerDesc: "International trading, export and import of animal feed and grain",
+    footerYear: "Founded 2025 | Moscow",
+    footerQuick: "Quick Access",
+    footerContact: "Contact Info",
+    footerRights: "© 2025 Tarlanacer. All rights reserved.",
+    devWatermark: "Designed & Developed by Mobin_Gorjizadeh",
+    powerWatermark: "Powered by Mobin_Gorjizadeh"
+  },
+  ru: {
+    navHome: "Главная",
+    navAbout: "О компании",
+    navGallery: "Галерея",
+    navContact: "Контакты",
+    heroBadge: "Компания Tarlanacer",
+    heroTitle1: "Мировые поставки и торговля",
+    heroTitle2: "Зерном и Кормами",
+    heroSubtitle: "Торговая компания Tarlanacer, основанная в 2025 году и базирующаяся в Москве, является специализированным эталоном экспорта и импорта стратегического зерна и кормов по самым высоким международным стандартам.",
+    aboutTitle: "О компании",
+    aboutText1: "Компания Tarlanacer была основана в 2025 году в коммерческом сердце Евразии (Москва) с целью развития устойчивой цепочки поставок в сельском хозяйстве и животноводстве.",
+    aboutText2: "Наш основной фокус — прямой экспорт и импорт различных зерновых и кормов для животных. Исключая ненужных посредников, мы обеспечиваем безопасную и прозрачную платформу.",
+    stat1Label: "Год основания",
+    stat2Label: "Гарантия товара",
+    stat3Label: "Поддержка",
+    stat4Label: "Клиенты",
+    servicesTag: "Сфера деятельности",
+    servicesTitle: "Наши торговые услуги",
+    serv1Title: "Экспорт кормов",
+    serv1Desc: "Специализированные поставки и экспорт шротов, кормовых добавок и сырья с гарантированной пищевой ценностью.",
+    serv2Title: "Экспорт и импорт зерна",
+    serv2Desc: "Оптовая торговля пшеницей, ячменем, фуражной кукурузой и масличными культурами в соответствии со стандартами качества.",
+    serv3Title: "Международная цепочка поставок",
+    serv3Desc: "Создание прямого коммуникационного моста между крупными производителями региона Евразия и импортерами по всему миру.",
+    serv4Title: "Инспекция и контроль качества",
+    serv4Desc: "Точная оценка безопасности груза, контроль влажности и санитарных норм от места производства до конечного пункта.",
+    advantagesTitle: "Преимущества работы с нами",
+    adv1: "Прямой доступ к первоисточникам",
+    adv2: "Контроль качества продукции",
+    adv3: "Лабораторные тесты безопасности",
+    adv4: "Международная логистика и очистка",
+    adv5: "Конкурентные цены",
+    galleryTag: "Галерея",
+    galleryTitle: "Галерея и события",
+    gal1Overlay: "Прямые поставки зерна",
+    gal2Overlay: "Качественные корма",
+    gal3Overlay: "Логистика и транспорт",
+    gal4Overlay: "Экспортные стандарты",
+    ctaTitle: "Готовы начать сотрудничество?",
+    ctaDesc: "Свяжитесь с нашим торговым отделом для запроса цен, анализа продукции и переговоров по контракту.",
+    ctaBtn: "Связаться с отделом",
+    contactHeroTag: "Контакты",
+    contactHeroTitle: "Связаться с Tarlanacer",
+    contactHeroDesc: "Наши эксперты готовы ответить на ваши запросы по поставкам, экспорту и импорту.",
+    addrTitle: "Штаб-квартира",
+    phoneTitle: "Телефон",
+    emailTitle: "Эл. почта",
+    specTitle: "Специализация компании",
+    specDesc: "Экспорт и импорт зерна и кормов",
+    specSub: "Основана: 2025",
+    mapTitle: "Расположение офиса",
+    mapHint: "Центр координации международной торговли зерном и кормами",
+    footerDesc: "Международная торговля, экспорт и импорт зерна и кормов",
+    footerYear: "Основана 2025 | Москва",
+    footerQuick: "Быстрый доступ",
+    footerContact: "Контакты",
+    footerRights: "© 2025 Tarlanacer. Все права защищены.",
+    devWatermark: "Разработано Mobin_Gorjizadeh",
+    powerWatermark: "Powered by Mobin_Gorjizadeh"
+  },
+  fa: {
+    navHome: "خانه",
+    navAbout: "درباره ما",
+    navGallery: "گالری تصاویر",
+    navContact: "ارتباط با ما",
+    heroBadge: "Tarlanacer Company",
+    heroTitle1: "تأمین و تجارت جهانی",
+    heroTitle2: "غلات و نهاده‌های دامی",
+    heroSubtitle: "شرکت بازرگانی Tarlanacer با استقرار در مسکو و تکیه بر شبکه گسترده تأمین، مرجع تخصصی صادرات و واردات غلات استراتژیک و نهاده‌های خوراک دام با بالاترین استانداردهای بین‌المللی است.",
+    aboutTitle: "معرفی شرکت",
+    aboutText1: "شرکت Tarlanacer در سال ۲۰۲۵ با هدف توسعه زنجیره تأمین پایدار در بخش کشاورزی و دامپروری، فعالیت خود را در قلب تجاری اوراسیا (مسکو) آغاز نمود.",
+    aboutText2: "تمرکز اصلی ما بر صادرات و واردات مستقیم انواع غلات و نهاده‌های دامی است. ما با حذف واسطه‌های غیرضروری، نظارت مستمر بر کیفیت محموله‌ها و پایبندی کامل به تعهدات قراردادی، بستری امن و شفاف برای شرکای تجاری و خریداران عمده فراهم کرده‌ایم.",
+    stat1Label: "سال تأسیس",
+    stat2Label: "ضمانت کالا",
+    stat3Label: "پشتیبانی",
+    stat4Label: "مشتریان",
+    servicesTag: "حوزه فعالیت",
+    servicesTitle: "خدمات بازرگانی ما",
+    serv1Title: "صادرات نهاده‌های دامی",
+    serv1Desc: "تأمین و صادرات تخصصی کنجاله‌ها، مکمل‌های خوراک دام و طیور و مواد اولیه با ارزش غذایی تضمین‌شده.",
+    serv2Title: "صادرات و واردات غلات",
+    serv2Desc: "تجارت عمده گندم، جو، ذرت دامی و دانه‌های روغنی مطابق با استانداردهای کیفی بازارهای هدف.",
+    serv3Title: "زنجیره تأمین بین‌المللی",
+    serv3Desc: "ایجاد پل ارتباطی مستقیم میان تولیدکنندگان بزرگ منطقه اوراسیا و واردکنندگان عمده در سراسر جهان.",
+    serv4Title: "بازرسی و تضمین کیفیت",
+    serv4Desc: "ارزیابی دقیق سلامت بار، کنترل رطوبت و استانداردهای بهداشتی از مبدأ تولید تا مقصد نهایی.",
+    advantagesTitle: "مزایای همکاری با ما",
+    adv1: "دسترسی مستقیم به منابع دست‌اول",
+    adv2: "انجام کنترل کیفی محصول",
+    adv3: "تست آزمایشگاهی سلامت محصول",
+    adv4: "لجستیک بین‌المللی و ترخیص سریع محموله‌ها",
+    adv5: "قیمت‌گذاری رقابتی",
+    galleryTag: "گالری",
+    galleryTitle: "گالری تصاویر و رویداد ها",
+    gal1Overlay: "تأمین مستقیم غلات",
+    gal2Overlay: "نهاده‌های دامی باکیفیت",
+    gal3Overlay: "حمل‌ونقل و لجستیک",
+    gal4Overlay: "استانداردهای صادراتی",
+    ctaTitle: "آماده آغاز همکاری تجاری هستید؟",
+    ctaDesc: "برای استعلام قیمت روز محموله‌ها، دریافت آنالیز محصولات و مذاکره جهت عقد قرارداد با بخش بازرگانی ما در ارتباط باشید.",
+    ctaBtn: "ارتباط با بخش بازرگانی",
+    contactHeroTag: "ارتباط با ما",
+    contactHeroTitle: "تماس با شرکت Tarlanacer",
+    contactHeroDesc: "کارشناسان بازرگانی ما آماده پاسخگویی به درخواست‌های تأمین، صادرات و واردات شما هستند.",
+    addrTitle: "آدرس دفتر مرکزی",
+    phoneTitle: "تلفن تماس",
+    emailTitle: "پست الکترونیک",
+    specTitle: "حوزه تخصصی شرکت",
+    specDesc: "صادرات و واردات نهاده‌های دامی و غلات",
+    specSub: "سال تأسیس: ۲۰۲۵",
+    mapTitle: "موقعیت دفتر مرکزی",
+    mapHint: "مسکو، فدراسیون روسیه",
+    footerDesc: "بازرگانی بین‌المللی، صادرات و واردات نهاده‌های دامی و غلات",
+    footerYear: "تأسیس ۲۰۲۵ | مسکو",
+    footerQuick: "دسترسی سریع",
+    footerContact: "اطلاعات تماس",
+    footerRights: "© ۲۰۲۵ Tarlanacer. تمامی حقوق محفوظ است.",
+    devWatermark: "طراحی و توسعه توسط Mobin_Gorjizadeh",
+    powerWatermark: "Powered by Mobin_Gorjizadeh"
+  }
+};
+
+function setLanguage(lang) {
+  localStorage.setItem('tarlanacer_lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.textContent.toLowerCase() === lang);
+  if(activeBtn) activeBtn.classList.add('active');
+
+  const t = translations[lang];
+  if (!t) return;
+
+  if (lang === 'fa') {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.setAttribute('lang', 'fa');
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+  }
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
+    }
+  });
+}
+
 window.addEventListener('load', () => {
   setTimeout(() => window.scrollTo(0, 0), 0);
 });
 
 function showPage(page){
-document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-document.getElementById('page-'+page).classList.add('active');
-document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
-document.querySelectorAll('.nav-link[data-page="'+page+'"]').forEach(l=>l.classList.add('active'));
-window.scrollTo({top:0,behavior:'instant'});
-const ham=document.getElementById('hamburger');
-const nav=document.getElementById('navLinks');
-if(ham)ham.classList.remove('active');
-if(nav)nav.classList.remove('active');
-setTimeout(()=>{
-document.querySelectorAll('#page-'+page+' .animate-on-scroll').forEach(el=>{
-el.classList.remove('visible');
-observer.observe(el);
-});
-},100);
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  document.querySelectorAll('.nav-link[data-page="'+page+'"]').forEach(l=>l.classList.add('active'));
+  window.scrollTo({top:0,behavior:'instant'});
+  const ham=document.getElementById('hamburger');
+  const nav=document.getElementById('navLinks');
+  if(ham)ham.classList.remove('active');
+  if(nav)nav.classList.remove('active');
+  setTimeout(()=>{
+    document.querySelectorAll('#page-'+page+' .animate-on-scroll').forEach(el=>{
+      el.classList.remove('visible');
+      observer.observe(el);
+    });
+  },100);
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-window.scrollTo(0, 0);
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>{
-navbar.classList.toggle('scrolled',window.scrollY>50);
-});
+  const savedLang = localStorage.getItem('tarlanacer_lang') || 'en';
+  setLanguage(savedLang);
 
-const hamburger=document.getElementById('hamburger');
-const navLinks=document.getElementById('navLinks');
-if(hamburger&&navLinks){
-hamburger.addEventListener('click',()=>{
-hamburger.classList.toggle('active');
-navLinks.classList.toggle('active');
-});
-}
+  window.scrollTo(0, 0);
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{
+    navbar.classList.toggle('scrolled',window.scrollY>50);
+  });
 
-window.observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting)entry.target.classList.add('visible');
-});
-},{threshold:.15});
-document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
+  const hamburger=document.getElementById('hamburger');
+  const navLinks=document.getElementById('navLinks');
+  if(hamburger&&navLinks){
+    hamburger.addEventListener('click',()=>{
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  }
 
-const animateCounter=el=>{
-const target=parseInt(el.getAttribute('data-target'));
-const prefix=el.getAttribute('data-prefix')||'';
-const suffix=el.getAttribute('data-suffix')||'';
-const step=target/(2000/16);
-let current=0;
-const update=()=>{
-current+=step;
-if(current<target){el.textContent=prefix+Math.floor(current)+suffix;requestAnimationFrame(update)}
-else el.textContent=prefix+target+suffix;
-};
-update();
-};
-const statsObserver=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.querySelectorAll('.stat-number').forEach(num=>{
-if(!num.classList.contains('counted')){num.classList.add('counted');animateCounter(num)}
-});
-}
-});
-},{threshold:.5});
-const aboutStats=document.querySelector('.about-stats');
-if(aboutStats)statsObserver.observe(aboutStats);
+  window.observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting)entry.target.classList.add('visible');
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
 
-const particlesContainer=document.getElementById('particles');
-if(particlesContainer){
-for(let i=0;i<30;i++){
-const p=document.createElement('div');
-p.classList.add('particle');
-const size=Math.random()*6+3;
-p.style.width=size+'px';
-p.style.height=size+'px';
-p.style.left=Math.random()*100+'%';
-p.style.animationDuration=(Math.random()*10+10)+'s';
-p.style.animationDelay=Math.random()*8+'s';
-particlesContainer.appendChild(p);
-}
-}
+  const animateCounter=el=>{
+    const target=parseInt(el.getAttribute('data-target'));
+    const prefix=el.getAttribute('data-prefix')||'';
+    const suffix=el.getAttribute('data-suffix')||'';
+    const step=target/(2000/16);
+    let current=0;
+    const update=()=>{
+      current+=step;
+      if(current<target){el.textContent=prefix+Math.floor(current)+suffix;requestAnimationFrame(update)}
+      else el.textContent=prefix+target+suffix;
+    };
+    update();
+  };
+  const statsObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.querySelectorAll('.stat-number').forEach(num=>{
+          if(!num.classList.contains('counted')){num.classList.add('counted');animateCounter(num)}
+        });
+      }
+    });
+  },{threshold:.5});
+  const aboutStats=document.querySelector('.about-stats');
+  if(aboutStats)statsObserver.observe(aboutStats);
 
-const floatingIcons=document.querySelectorAll('.floating-icon');
-window.addEventListener('mousemove',e=>{
-if(window.innerWidth<992)return;
-const x=(e.clientX/window.innerWidth-.5)*20;
-const y=(e.clientY/window.innerHeight-.5)*20;
-floatingIcons.forEach((icon,i)=>{
-icon.style.transform=`translate(${x*(i+1)*.3}px,${y*(i+1)*.3}px)`;
-});
-});
+  const particlesContainer=document.getElementById('particles');
+  if(particlesContainer){
+    for(let i=0;i<30;i++){
+      const p=document.createElement('div');
+      p.classList.add('particle');
+      const size=Math.random()*6+3;
+      p.style.width=size+'px';
+      p.style.height=size+'px';
+      p.style.left=Math.random()*100+'%';
+      p.style.animationDuration=(Math.random()*10+10)+'s';
+      p.style.animationDelay=Math.random()*8+'s';
+      particlesContainer.appendChild(p);
+    }
+  }
+
+  const floatingIcons=document.querySelectorAll('.floating-icon');
+  window.addEventListener('mousemove',e=>{
+    if(window.innerWidth<992)return;
+    const x=(e.clientX/window.innerWidth-.5)*20;
+    const y=(e.clientY/window.innerHeight-.5)*20;
+    floatingIcons.forEach((icon,i)=>{
+      icon.style.transform=`translate(${x*(i+1)*.3}px,${y*(i+1)*.3}px)`;
+    });
+  });
 });
 </script>
 </body>
