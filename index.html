@@ -66,11 +66,11 @@ section{padding:100px 0}
 .about{background:#fff}
 .about-content-wrap{max-width:860px;margin:0 auto}
 .about-content p{color:var(--text-muted);margin-bottom:16px;font-size:1.05rem;text-align:justify}
-.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;width:100%}
-.stat-item{text-align:center;padding:18px 10px;background:var(--bg-cream);border-radius:var(--radius-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:center;align-items:center}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;width:100%}
+.stat-item{text-align:center;padding:22px 16px;background:var(--bg-cream);border-radius:var(--radius-sm);transition:var(--transition);display:flex;flex-direction:column;justify-content:center;align-items:center}
 .stat-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.stat-number{display:block;font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:4px;line-height:1.2}
-.stat-label{font-size:.8rem;color:var(--text-muted);line-height:1.3}
+.stat-number{display:block;font-size:1.8rem;font-weight:800;color:var(--primary);margin-bottom:4px;line-height:1.2}
+.stat-label{font-size:.85rem;color:var(--text-muted);line-height:1.3}
 .services{background:linear-gradient(180deg,var(--bg-light) 0%,#e8f5e9 100%)}
 .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .service-card{background:#fff;padding:36px 28px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden;transition:var(--transition);border:1px solid transparent}
@@ -165,8 +165,8 @@ section{padding:100px 0}
 .gallery-grid .gallery-item:nth-child(3){transition-delay:.3s}
 .gallery-grid .gallery-item:nth-child(4){transition-delay:.4s}
 @media(max-width:992px){.hero-content{grid-template-columns:1fr;text-align:center;gap:40px}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-visual{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}.contact-info{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;top:70px;right:-100%;width:80%;max-width:300px;height:calc(100vh - 70px);background:#fff;flex-direction:column;padding:30px 20px;box-shadow:var(--shadow-lg);transition:right .4s ease;gap:8px}.nav-links.active{right:0}.nav-link{width:100%;text-align:center;padding:14px}.services-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:280px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-contact li{justify-content:center}section{padding:70px 0}.about-stats{grid-template-columns:repeat(4,1fr);gap:8px}.stat-item{padding:12px 4px}.stat-number{font-size:1.15rem}.stat-label{font-size:.68rem}}
-@media(max-width:480px){.hero-title{font-size:1.8rem}.about-stats{grid-template-columns:repeat(4,1fr);gap:6px}.stat-item{padding:10px 2px}.stat-number{font-size:1.05rem}.stat-label{font-size:.65rem}.about-card-box{padding:28px 20px}}
+@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;top:70px;right:-100%;width:80%;max-width:300px;height:calc(100vh - 70px);background:#fff;flex-direction:column;padding:30px 20px;box-shadow:var(--shadow-lg);transition:right .4s ease;gap:8px}.nav-links.active{right:0}.nav-link{width:100%;text-align:center;padding:14px}.services-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:280px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-contact li{justify-content:center}section{padding:70px 0}.about-stats{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:480px){.hero-title{font-size:1.8rem}.about-stats{grid-template-columns:repeat(2,1fr);gap:10px}.about-card-box{padding:28px 20px}}
 </style>
 </head>
 <body>
@@ -197,7 +197,7 @@ section{padding:100px 0}
 <span class="hero-badge" dir="ltr">Tarlanacer Company</span>
 <h1 class="hero-title">
 <span class="title-line">تأمین و تجارت جهانی</span>
-<span class="title-line highlight">نهاده‌های دامی و غلات</span>
+<span class="title-line highlight">غلات و نهاده‌های دامی</span>
 </h1>
 <p class="hero-subtitle">شرکت بازرگانی <strong>Tarlanacer</strong> با استقرار در مسکو و تکیه بر شبکه گسترده تأمین، مرجع تخصصی صادرات و واردات غلات استراتژیک و نهاده‌های خوراک دام با بالاترین استانداردهای بین‌المللی است.</p>
 </div>
@@ -292,22 +292,18 @@ section{padding:100px 0}
 <div class="title-underline"></div>
 </div>
 <div class="gallery-grid">
-<!-- جایگاه تصویر ۱ (لینک عکس اول را در src قرار دهید) -->
 <div class="gallery-item animate-on-scroll">
 <img src="https://i.ibb.co/bfjby2m/IMG-4902.png" alt="تصویر فعالیت ۱" class="gallery-img">
 <div class="gallery-overlay"><span>تأمین مستقیم غلات</span></div>
 </div>
-<!-- جایگاه تصویر ۲ (لینک عکس دوم را در src قرار دهید) -->
 <div class="gallery-item animate-on-scroll">
 <img src="https://i.ibb.co/Ng4FPNHk/IMG-0896.jpg" alt="تصویر فعالیت ۲" class="gallery-img">
 <div class="gallery-overlay"><span>نهاده‌های دامی باکیفیت</span></div>
 </div>
-<!-- جایگاه تصویر ۳ (لینک عکس سوم را در src قرار دهید) -->
 <div class="gallery-item animate-on-scroll">
 <img src="https://i.ibb.co/cn4gmkT/f6c94133-5794-4b7f-b643-9026bea5a70d.jpg" alt="تصویر فعالیت ۳" class="gallery-img">
 <div class="gallery-overlay"><span>حمل‌ونقل و لجستیک</span></div>
 </div>
-<!-- جایگاه تصویر ۴ (لینک عکس چهارم را در src قرار دهید) -->
 <div class="gallery-item animate-on-scroll">
 <img src="https://i.ibb.co/Mx0PHjvY/IMG-4903.png" alt="تصویر فعالیت ۴" class="gallery-img">
 <div class="gallery-overlay"><span>استانداردهای صادراتی</span></div>
@@ -363,7 +359,7 @@ section{padding:100px 0}
 <div class="info-icon">📧</div>
 <div class="info-content">
 <h3>پست الکترونیک</h3>
-<a href="mailto:vagsjvsvs@gmail.com">vagsjvsvs@gmail.com</a>
+<a href="mailto:info@tarlanacer.com">info@tarlanacer.com</a>
 </div>
 </div>
 <div class="info-card highlight-card">
@@ -419,7 +415,7 @@ section{padding:100px 0}
 <ul>
 <li><span class="contact-icon">📍</span><span>Flat 7 building 13, kosygina st</span></li>
 <li><span class="contact-icon">📞</span><span dir="ltr">+61 3 8376 6284</span></li>
-<li><span class="contact-icon">📧</span><a href="mailto:vagsjvsvs@gmail.com">vagsjvsvs@gmail.com</a></li>
+<li><span class="contact-icon">📧</span><a href="mailto:info@tarlanacer.com">info@tarlanacer.com</a></li>
 </ul>
 </div>
 </div>
